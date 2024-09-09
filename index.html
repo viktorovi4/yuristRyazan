@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юридическая Фирма</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-icons">
+        <a href="tel:+1234567890" class="contact-icon phone" title="Позвонить">
+            <img src="phone.png" alt="Телефон">
+        </a>
+        <a href="https://wa.me/1234567890" class="contact-icon whatsapp" title="WhatsApp">
+            <img src="whatsapp-icon.png" alt="WhatsApp">
+        </a>
+        
+    </div>
+<!-- Встраивание формы Google Forms -->
+<div id="callbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Запрос на звонок</h2>
+        <!-- Вставьте сюда код Google Forms -->
+        <iframe src="https://forms.gle/rvk1xVi186JeJEEw9" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+    </div>
+</div>
+    <header>
+        <div class="container">
+            <h1>Юридическая Фирма</h1>
+            <p>Ваши надежные адвокаты</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><button class="callback-btn" onclick="openModal()">Перезвоните мне</button></li>
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Добро пожаловать в нашу юридическую фирму</h2>
+            <p>Мы предлагаем профессиональные юридические услуги. Свяжитесь с нами для консультации.</p>
+            <a href="#contact" class="btn">Записаться на консультацию</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="profiles">
+                <div class="profile">
+                    <img src="юрист1.jpg" alt="Адвокат 1">
+                    <h3>Адвокат 1</h3>
+                    <p>Биография и специализация адвоката 1.</p>
+                </div>
+                <div class="profile">
+                    <img src="юрист2.jpg" alt="Адвокат 2">
+                    <h3>Адвокат 2</h3>
+                    <p>Биография и специализация адвоката 2.</p>
+                </div>
+            </div>
+            <p>Наши ценности и миссия...</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Услуги</h2>
+            <ul>
+                <li>Услуга 1: Описание услуги 1</li>
+                <li>Услуга 2: Описание услуги 2</li>
+                <li>Услуга 3: Описание услуги 3</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+            <div class="contact-info">
+                <p>Адрес: Ваш адрес</p>
+                <p>Телефон: Ваш телефон</p>
+                <p>Email: <a href="mailto:info@yourfirm.com">info@yourfirm.com</a></p>
+                <div id="map">
+                    <!-- Вставьте интерактивную карту здесь -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2>Блог</h2>
+            <article>
+                <h3>Статья 1</h3>
+                <p>Краткое содержание статьи 1...</p>
+            </article>
+            <article>
+                <h3>Статья 2</h3>
+                <p>Краткое содержание статьи 2...</p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Юридическая Фирма. Все права защищены.</p>
+            <p>Адрес: Ваш адрес | Телефон: Ваш телефон | Email: <a href="mailto:info@yourfirm.com">info@yourfirm.com</a></p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+<!-- Подключение внешнего JavaScript-файла -->
+<script src="scripts.js"></script>    
+</body>
+</html>

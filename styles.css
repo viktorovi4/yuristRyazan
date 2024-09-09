@@ -1,0 +1,344 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок и меню */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для кнопки "Перезвоните мне" */
+.callback-btn {
+    background-color: #e74c3c; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Отступы */
+    cursor: pointer; /* Курсор указателя */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.callback-btn:hover {
+    background-color: #c0392b; /* Цвет при наведении */
+}
+
+/* Стили модального окна */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1000; /* Поверх всех элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Прокрутка при необходимости */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+/* Стили содержимого модального окна */
+.modal-content {
+    background-color: #fefefe; /* Цвет фона */
+    margin: 10% auto; /* Центрирование */
+    padding: 20px; /* Отступы */
+    border: 1px solid #888; /* Рамка */
+    width: 80%; /* Ширина */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 8px; /* Закругленные углы */
+    position: relative; /* Позиционирование */
+}
+
+.close {
+    color: #aaa; /* Цвет крестика закрытия */
+    float: right; /* Положение справа */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    cursor: pointer; /* Курсор указателя */
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Цвет при наведении или фокусе */
+    text-decoration: none; /* Удаление подчеркивания */
+    cursor: pointer; /* Курсор указателя */
+}
+
+/* Секция героя с фоновым изображением */
+.hero {
+    background-image: url('background.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Масштабирует изображение по размеру блока */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    padding: 100px 20px; /* Отступы для внутреннего содержимого */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Положение для наложения */
+}
+
+/* Наложение для затемнения фона и улучшения читаемости текста */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Черное наложение с прозрачностью */
+    z-index: 1; /* Размещает наложение ниже текста */
+}
+
+/* Стили для содержимого секции героя */
+.hero-content {
+    position: relative; /* Положение для работы с z-index */
+    z-index: 2; /* Текст поверх наложения */
+    max-width: 600px; /* Максимальная ширина текста */
+    margin: 0; /* Убираем автоцентрирование */
+    padding-left: 20px; /* Отступ слева */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.hero h2 {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.hero p {
+    font-size: 1.2em; /* Размер параграфа */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.hero .btn {
+    background-color: #53d10a; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    text-decoration: none; /* Удаление подчеркивания */
+    border-radius: 5px; /* Закругление углов кнопки */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.hero .btn:hover {
+    background-color: #155a04; /* Цвет кнопки при наведении */
+}
+
+/* Основные секции */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* О нас */
+.profiles {
+    display: flex;
+    gap: 20px;
+}
+
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.profile img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* Контактная форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1a242f;
+}
+
+/* Подвал сайта */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
+
+/* Минимальные устройства */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    footer .social-media a {
+        font-size: 0.8em;
+    }
+}
+/* Общие стили для иконок */
+.contact-icons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.contact-icon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Анимация для значка телефона */
+.contact-icon.phone img {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Анимация для мобильных устройств */
+@media (max-width: 768px) {
+    .contact-icons {
+        top: 20px;
+        right: 20px;
+    }
+
+    .contact-icon {
+        margin-bottom: 20px;
+    }
+
+    .contact-icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
